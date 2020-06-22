@@ -1,0 +1,31 @@
+<script>
+var i=0;
+var images=[];
+var time=2000;
+
+//ImageList
+images[0]='./assets/itachi-uchiha.jpg';
+images[1]='./assets/itachiWallpaper.jpg';
+images[2]='./assets/Naruto.jpg';
+images[3]='./assets/Luffy.jpg';
+images[4]='./assets/Luffy1.png';
+images[5]='./assets/RoronoaZoro.jpg';
+images[6]='./assets/17378.jpg';
+
+
+//Change Image
+function changeImg(){
+    document.slide.src=images[i];
+
+if(i<images.length-1){
+    i++;
+}
+else{
+    i=0;
+}
+setTimeout("changeImg()",time);
+}
+window.onload=changeImg;
+</script>
+
+<img name="slide" width="1520px" height="740px">
